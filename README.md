@@ -1,1 +1,0 @@
-# HugoVazquez-x.github.io
