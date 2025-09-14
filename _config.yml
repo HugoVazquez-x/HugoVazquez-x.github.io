@@ -1,8 +1,11 @@
 title: "Personal Blog"
 description: "Markdown articles"
+url: "https://hugovazquez-x.github.io"
+baseurl: ""
 theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 markdown: kramdown
 kramdown:
   math_engine: mathjax
-include:
-  - _includes/head-custom.html
