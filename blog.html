@@ -1,0 +1,23 @@
+---
+layout: blog
+title: "Blog"
+---
+
+<section class="container blog-list-page">
+  <h1 class="blog-list-title">Articles</h1>
+  <div class="grid">
+    {%- for post in site.posts -%}
+      <article class="card">
+        <a class="card-link" href="{{ post.url | relative_url }}">
+          <div class="card-content">
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-meta">{{ post.date | date: "%b %d, %Y" }}</p>
+            {%- if post.excerpt -%}
+              <p class="card-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+            {%- endif -%}
+          </div>
+        </a>
+      </article>
+    {%- endfor -%}
+  </div>
+</section>
